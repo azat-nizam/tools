@@ -3,7 +3,7 @@
     "description": "Light set for little purposes",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "authors": [
         {
             "name": "Azat Nizameev",
@@ -15,6 +15,6 @@
             "Azatnizam\\Tools\\": "src/"
         }
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "beta",
     "require": {}
 }
