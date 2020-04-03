@@ -1,0 +1,20 @@
+{
+    "name": "azatnizam/tools",
+    "description": "Light set for little purposes",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Azat Nizameev",
+            "email": "azat.nizam@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Azatnizam\\Tools\\": "src/"
+        }
+    },
+    "minimum-stability": "alpha",
+    "require": {}
+}
