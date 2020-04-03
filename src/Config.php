@@ -8,9 +8,17 @@ class Config
 
     protected $config;
 
+    protected $configFile;
+
     protected function __construct()
     {
-        $this->config = parse_ini_file(dirname(__DIR__) . '/config.ini', true);
+        $this->configFile = $_SERVER['DOCUMENT_ROOT'] . '/config.ini';
+
+        if ( file_exists($this->configFile) ) {
+            $this->config = parse_ini_file($this->configFile, true);
+        } else {
+            throw new \Exception('Config file ' . $this->configFile . ' does not exist');
+        }
     }
 
 
@@ -30,7 +38,8 @@ class Config
 
     /**
      * @param string $param
-     * @return mixed
+     * @return array
+     * @throws \Exception
      */
     public static function get(string $param): array
     {
